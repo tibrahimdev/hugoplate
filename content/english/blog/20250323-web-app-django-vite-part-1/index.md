@@ -5,15 +5,12 @@ meta_title: ""
 description: "this is meta description"
 date: 2025-03-22T09:00:30Z
 publishedDate: 2025-03-22T09:00:30Z
-# image: "/images/image-placeholder.png"
-image: "/images/20250323-web-app-django-vite-part-1/05-sidebar-menu.gif"
+image: "05-sidebar-menu.gif"
 categories: ["Web App"]
 author: "Taufiq Ibrahim"
 tags: ["react", "vite", "shadcn", "tailwind"]
 draft: false
 ---
-
-```Setup Django + Vite Web App with `shadcn/ui` – Build a Dashboard with Sidebar```
 
 This is the first article in a series on building a modern web application using the following technologies::
 - Frontend service built using [React](https://react.dev/) + [Vite](https://vite.dev/)
@@ -33,24 +30,12 @@ We will start by scaffolding a new Vite project -- following [Scaffolding Your F
 
 We will use `node 22` and `pnpm` through the entire project
 
-```go
+```bash
 pnpm create vite frontend --template react-ts .
 ```
 
-```go
-
-package main
-
-import "fmt"
-
-func main() {
-	// hi
-	fmt.Println("Hello, World!")
-}
-```
-
 It will print output like this:
-```
+```bash
 │
 ◇  Scaffolding project in /home/user/web-app-django-vite-shadcn/frontend...
 │
@@ -62,7 +47,7 @@ It will print output like this:
 ```
 
 As mentioned above, let's move to `frontend` directory and run that two commands.
-```
+```bash
   VITE v6.2.2  ready in 183 ms
 
   ➜  Local:   http://localhost:5173/
@@ -72,7 +57,7 @@ As mentioned above, let's move to `frontend` directory and run that two commands
 
 We will have the UI accessible on http://localhost:5173.
 
-<img src="./01-default-react-ui.png" alt="Default React UI" style="height: 50vh;"/>
+{{< image src="01-default-react-ui.png" webp="false" width="822px" >}}
 
 Let's do few things stupid here:
 - Delete `frontend/src/App.css`
@@ -115,7 +100,7 @@ Short explanation:
 
 The UI will become as simple as this empty page:
 
-<img src="./02-empty-web-app.png" alt="Empty web app" style="height: 50vh;"/>
+{{< image src="02-empty-web-app.png" webp="false" width="822px" >}}
 
 ## Setting Up Routing
 Back to our goals, we wanted to have a `/dashboard` path to be rendered and other URLs to be served using 404 not found page. That goals requires a mechanism called routing. This is very basic, somewhat forgotten, but we will do this as early as possible on our project.
@@ -165,7 +150,7 @@ createRoot(document.getElementById('root')!).render(
 
 Now, if we save it and try to navigate to http://localhost:5173, the same empty page will be rendered. But, if we try to navigate to http://localhost:5173/dashboard, it will show an error page saying *Unexpected Application Error! 404 Not Found* and tells use to provide **ErrorBoundary** or **errorElement**. We'll get back to that later. For now, let's focus on how to show `/dashboard` first.
 
-<img src="./03-404.png" alt="Empty web app" style="height: 50vh;"/>
+{{< image src="03-404.png" webp="false" width="822px" >}}
 
 ### Routing to /dashboard
 This section shows on how render a correct page for `/dashboard` and get rid of the 404 not found page.
@@ -422,7 +407,7 @@ The simple rule is, the `index.tsx` must return an exported React component.
 
 Now, let's head back to our browser and see!
 
-<img src="./04-our-first-sidebar.gif" alt="sidebar" style="height: 50vh;"/>
+{{< image src="04-our-first-sidebar.gif" webp="false" width="822px" >}}
 
 ### Populate the Sidebar Menu
 I believe you've stopped smiling now because you realized: There's no menu on that sidebar.
@@ -506,4 +491,4 @@ export function AppSidebar() {
 
 See what happen now!
 
-<img src="./05-sidebar-menu.gif" alt="sidebar" style="height: 50vh;"/>
+{{< image src="05-sidebar-menu.gif" webp="false" width="822px" >}}
