@@ -5,7 +5,7 @@ meta_title: ""
 description: "this is meta description"
 date: 2025-03-22T09:00:30Z
 publishedDate: 2025-03-22T09:00:30Z
-image: "05-sidebar-menu.gif"
+thumbnail: "05-sidebar-menu.gif"
 categories: ["Web Development"]
 author: "Taufiq Ibrahim"
 tags: ["react", "vite", "shadcn", "tailwind"]
