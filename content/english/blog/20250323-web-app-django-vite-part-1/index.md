@@ -11,15 +11,15 @@ tags: ["react", "vite", "shadcn", "tailwind"]
 draft: false
 ---
 
-This is the first article in a series on building a modern web application using the following technologies::
+This is the first article in a series on building a modern web application using the following technologies:
 - Frontend service built using [React](https://react.dev/) + [Vite](https://vite.dev/)
 - UI components using [shadcn/ui](https://ui.shadcn.com/)
 - Backend service using [Django](https://www.djangoproject.com/)
 
-The final code of this article available as a branch on https://github.com/tibrahimdev/web-app-django-vite-shadcn/tree/%231-initial#
+The final code of this article available as a branch on https://github.com/tibrahimdev/web-app-django-vite-shadcn/tree/1-initial
 
 ## The Goals
-- No backend APIs involved yet
+- Frontend only (no backend involved yet)
 - A single page on `/dashboard` path showing a colapsible sidebar
 - Other path will return 404 page
 - Create great UI with the help of `shadcn/ui` components
@@ -57,10 +57,10 @@ We will have the UI accessible on http://localhost:5173.
 
 {{< image src="01-default-react-ui.png" webp="false" width="822px" >}}
 
-Let's do few things stupid here:
+Let's do few things here:
 - Delete `frontend/src/App.css`
 - Delete `frontend/src/App.tsx`
-- Edit the `frontend/src/main.tsx` into a very simple page contain a simple text **The Web App**. 
+- Edit the `frontend/src/main.tsx` into an empty page. 
 
 Previously, it should looks like this:
 
@@ -313,7 +313,7 @@ One big thing is, the command also update the `frontend/src/index.css`!
 
 In the past, creating sidebar can be a long job. We'll see on this section how productive can we be using a wonderful UI framework such as `shadcn/ui`.
 
-As written in x, now we need to create a file called `frontend/src/app/layout.tsx` with following content:
+As written in [Sidebar documentation](https://ui.shadcn.com/docs/components/sidebar), now we need to create a file called `frontend/src/app/layout.tsx` with following content:
 ```tsx
 // frontend/src/app/layout.tsx
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
@@ -490,3 +490,13 @@ export function AppSidebar() {
 See what happen now!
 
 {{< image src="05-sidebar-menu.gif" webp="false" width="822px" >}}
+
+## Wrap Up
+This wraps up the first article in our series on building a modern web application.
+So far, we’ve:
+
+- ✅ Set up a frontend server.
+- ✅ Built a /dashboard page with a collapsible sidebar using `shadcn/ui` components.
+- ✅ Handled unknown routes with a 404 page.
+
+In the next article, we’ll continue expanding our application by adding user authentication. Stay tuned and happy coding! 🚀
