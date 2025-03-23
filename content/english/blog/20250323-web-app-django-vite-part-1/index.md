@@ -1,6 +1,5 @@
 ---
 title: "Building a Modern Web App with Django, Vite & shadcn/ui (Part 1) – Project Setup"
-# slug: web-app-django-vite-part-1
 meta_title: ""
 description: "this is meta description"
 date: 2025-03-22T09:00:30Z
