@@ -6,7 +6,7 @@ description: "this is meta description"
 date: 2025-03-22T09:00:30Z
 publishedDate: 2025-03-22T09:00:30Z
 image: "05-sidebar-menu.gif"
-categories: ["Web App"]
+categories: ["Web Development"]
 author: "Taufiq Ibrahim"
 tags: ["react", "vite", "shadcn", "tailwind"]
 draft: false
@@ -27,7 +27,6 @@ The final code of this article available as a branch on https://github.com/tibra
 
 ## Initialize the UI
 We will start by scaffolding a new Vite project -- following [Scaffolding Your First Vite Project](https://vite.dev/guide/#scaffolding-your-first-vite-project).
-
 We will use `node 22` and `pnpm` through the entire project
 
 ```bash
