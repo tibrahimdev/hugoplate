@@ -1,4 +1,13 @@
 /* Add your own custom styles here */
+html {
+  font-size: var(--text-base) !important;
+}
+
+ul li, ol li {
+  margin-bottom: 0rem; /* Adjust this value to make it tighter */
+  padding-bottom: 0; /* Ensure no extra padding */
+}
+
 & :is(:where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))) {
   color: var(--text-light);
 }
